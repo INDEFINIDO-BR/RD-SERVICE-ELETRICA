@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Painel de Leads - RD Service</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 20px;
+                background: #f0f2f5;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #333;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            th,
+            td {
+                text-align: left;
+                padding: 12px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #0E3066;
+                color: white;
+            }
+
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+
+            .refresh-btn {
+                background: #ffc107;
+                border: none;
+                padding: 10px 20px;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h1>Leads Recebidos</h1>
+                <button class="refresh-btn" onclick="location.reload()">Atualizar Lista</button>
+            </div>
+
+            <table id="leadsTable">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Serviço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Carregando dados...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+            import { getFirestore, collection, getDocs, orderBy, query } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+            // Mesma config
+            const firebaseConfig = {
+                apiKey: "AIzaSyClPzHFvyVSzGHQ4tcJ6_3cz8VsUVs7IK0",
+                authDomain: "projeto-rd-service.firebaseapp.com",
+                projectId: "projeto-rd-service",
+                storageBucket: "projeto-rd-service.firebasestorage.app",
+                messagingSenderId: "910899581836",
+                appId: "1:910899581836:web:69a2455f9e4f718e8b3ca9",
+                measurementId: "G-1GC9NR8EZ4"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const db = getFirestore(app);
+
+            async function loadLeads() {
+                const tableBody = document.querySelector("#leadsTable tbody");
+                tableBody.innerHTML = ""; // Limpa
+
+                try {
+                    // Pega coleção 'orcamentos' ordenada por data (descendente)
+                    const q = query(collection(db, "orcamentos"), orderBy("data", "desc"));
+                    const querySnapshot = await getDocs(q);
+
+                    if (querySnapshot.empty) {
+                        tableBody.innerHTML = "<tr><td colspan='4'>Nenhum orçamento encontrado.</td></tr>";
+                        return;
+                    }
+
+                    querySnapshot.forEach((doc) => {
+                        const data = doc.data();
+                        // Formata data se existir
+                        const dateObj = data.data ? data.data.toDate() : new Date();
+                        const dataFormatada = dateObj.toLocaleDateString() + ' ' + dateObj.toLocaleTimeString();
+
+                        const row = `
+                    <tr>
+                        <td>${dataFormatada}</td>
+                        <td>${data.nome}</td>
+                        <td>${data.telefone}</td>
+                        <td>${data.servico}</td>
+                    </tr>
+                `;
+                        tableBody.innerHTML += row;
+                    });
+                } catch (error) {
+                    console.error("Erro:", error);
+                    tableBody.innerHTML = `<tr><td colspan='4' style='color:red;'>Erro ao carregar (Verifique o console ou regras do Firebase).<br>Obs: Se for o primeiro uso, crie o índice no console do Firebase se solicitado.</td></tr>`;
+                }
+            }
+
+            loadLeads();
+        </script>
+
+    </body>
+
+</html>

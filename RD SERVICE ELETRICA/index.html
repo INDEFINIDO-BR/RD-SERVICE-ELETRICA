@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluções em Elétrica, Automação e Energia Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="header-container">
+        <img class="img-logo" src="./logo/ChatGPT Image 26 de set. de 2025, 08_17_15.png" alt="Logo">
+
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+          <a class="link" href="#home" onclick="closeMenuMobile()">Home</a>
+          <a class="link" href="#servicos" onclick="closeMenuMobile()">Serviços</a>
+          <a class="link" href="#clientes" onclick="closeMenuMobile()">Clientes</a>
+          <a class="link" href="#galeria" onclick="closeMenuMobile()">Galeria</a>
+          <!-- <a class="link btn-header-cta" href="#contato" onclick="closeMenuMobile()">Orçamento</a> -->
+        </nav>
+
+        <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <div class="hero-left">
+            <h1 class="hero-title">
+              Soluções em elétrica,<br>
+              automação e energia solar
+            </h1>
+            <p class="hero-description">
+              Projetos, instalações e manutenção com<br>
+              profissionalismo e segurança para residências e empresas.
+            </p>
+            <button class="btn-primary" onclick="document.querySelector('.form-section').scrollIntoView()">Solicitar
+              orçamento</button>
+          </div>
+
+          <div class="hero-right"></div>
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-content">
+              <div class="stat-number">+100</div>
+              <div class="stat-label">Projetos concluídos</div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🔧</div>
+            <div class="stat-content">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Equipe Técnica</div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">✓</div>
+            <div class="stat-content">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Suporte Emergencial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon yellow"><img src="./icons/instantaneo.png" alt="Instalação"></div>
+            <h3 class="service-title">Instalações Elétricas</h3>
+            <p class="service-description">Quadros, estruturas, cabeamento e manutenções preventivas</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon green"><img src="./icons/robotica.png" alt="Automação"></div>
+            <h3 class="service-title">Automação</h3>
+            <p class="service-description">Automatize iluminação, portões, segurança e climatização</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon blue"><img src="./icons/painel-solar.png" alt="Solar"></div>
+            <h3 class="service-title">Aquecimento Solar</h3>
+            <p class="service-description">Projetos e instalações de aquecimento solar para água.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon teal"><img src="./icons/electrical-engineering.png" alt="Manutenção"></div>
+            <h3 class="service-title">Manutenção</h3>
+            <p class="service-description">Atendimento rápido e consertos com garantia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="companies" id="clientes">
+      <div class="container">
+        <h2 class="section-title">Empresas que confiam no nosso trabalho</h2>
+
+        <div class="marquee">
+          <div class="marquee-content">
+            <div class="company-logo"><img src="./assets/clara.jpg" alt="Clara"></div>
+            <div class="company-logo"><img src="./assets/richs.png" alt="Richs"></div>
+            <div class="company-logo"><img src="./assets/assencoengenharia_logo.jpeg" alt="Assenco"></div>
+            <div class="company-logo"><img src="./assets/hospital-samaritano-sorocaba-300x180.webp" alt="Samaritano">
+            </div>
+            <div class="company-logo"><img src="./assets/ENGPRO-ENGENHARIA-E-SERVICOS-LTDA.webp" alt="Engpro"></div>
+            <div class="company-logo"><img src="./assets/SKF.jpg" alt="SKF"></div>
+
+            <div class="company-logo"><img src="./assets/clara.jpg" alt="Clara"></div>
+            <div class="company-logo"><img src="./assets/richs.png" alt="Richs"></div>
+            <div class="company-logo"><img src="./assets/assencoengenharia_logo.jpeg" alt="Assenco"></div>
+            <div class="company-logo"><img src="./assets/hospital-samaritano-sorocaba-300x180.webp" alt="Samaritano">
+            </div>
+            <div class="company-logo"><img src="./assets/ENGPRO-ENGENHARIA-E-SERVICOS-LTDA.webp" alt="Engpro"></div>
+            <div class="company-logo"><img src="./assets/SKF.jpg" alt="SKF"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+        <h2 class="section-title"> Projetos RD SERVICE</h2>
+        <p class="section-subtitle">Clique na seta para ver mais e clique na imagem para detalhes</p>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+
+          <div class="carousel-track" id="track">
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço1.jpg" alt="Instalação Industrial"
+                data-titulo="Adequação de Sistema de Aquecimento Industrial com Boiler"
+                data-desc="Projeto e adequação de sistema de aquecimento industrial utilizando boiler, garantindo eficiência térmica, segurança operacional e conformidade com normas técnicas aplicáveis ao ambiente industrial.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço2.jpg" alt="Painel Solar Residencial"
+                data-titulo="Energia Solar Residencial"
+                data-desc="Instalação de central de aquecimento solar para uso residencial, proporcionando aquecimento de água eficiente, economia de energia elétrica e maior sustentabilidade.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço3.jpg" alt="Automação Predial" data-titulo="Sistema Solar Automatizado para Aquecimento de Piscinas"
+                data-desc="Implantação de sistema solar com automação dedicada ao aquecimento de piscinas, permitindo controle inteligente da temperatura e melhor aproveitamento da energia solar.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/sserviço4.jpg" alt="Automação Predial" data-titulo="Automação Elétrica Predial"
+                data-desc="Execução de sistema de automação elétrica predial, integrando controle de cargas, segurança e eficiência energética para ambientes residenciais ou comerciais.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço5.jpg" alt="Automação Predial" data-titulo="Painel de Automação Elétrica"
+                data-desc="Desenvolvimento e instalação de painel de automação elétrica, projetado para controle, proteção e gerenciamento de sistemas elétricos de forma segura e organizada.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço6.jpg" alt="Automação Predial" data-titulo="Banco de Capacitores para Correção de Fator de Potência"
+                data-desc="Instalação de banco de capacitores destinado à correção do fator de potência, reduzindo perdas elétricas, evitando multas e melhorando o desempenho da rede elétrica.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço7.jpg" alt="Automação Predial" data-titulo="Sistema de Aquecimento de Água a Gás"
+                data-desc="Instalação de aquecedor a gás para aquecimento de água, oferecendo alto desempenho térmico, confiabilidade e conforto para aplicações residenciais ou comerciais.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço8.jpg" alt="Automação Predial" data-titulo="Central de Aquecimento com Apoio a Gás"
+                data-desc="Sistema de aquecimento híbrido, combinando energia solar com apoio a gás, assegurando fornecimento contínuo de água quente mesmo em períodos de baixa radiação solar.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço9.jpg" alt="Automação Predial" data-titulo="Sistema de Automação Elétrica"
+                data-desc="Implantação de sistema de automação elétrica para controle eficiente de equipamentos e processos, aumentando a confiabilidade e a praticidade da operação.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço10.jpg" alt="Automação Predial" data-titulo="Sistema Solar para Aquecimento de Água para Banho"
+                data-desc="Instalação de sistema solar térmico destinado ao aquecimento de água para banho, promovendo economia de energia e conforto no uso diário.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço11.jpg" alt="Automação Predial" data-titulo="Automação de Sistemas Elétricos"
+                data-desc="Automação aplicada a sistemas elétricos, permitindo maior controle, segurança e eficiência no funcionamento de instalações residenciais ou comerciais">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço12.jpg" alt="Automação Predial" data-titulo="Automação Elétrica e Controle de Processos"
+                data-desc="Solução de automação elétrica voltada ao controle de processos, otimizando o desempenho dos sistemas e facilitando a operação e manutenção.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço13.jpg" alt="Automação Predial" data-titulo="Sistema de Aquecimento para Sauna"
+                data-desc="Projeto e instalação de sistema de aquecimento específico para saunas, garantindo controle preciso de temperatura e operação segura.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+            <div class="carousel-card" onclick="openModal(this)">
+              <img src="assets experience/serviço14.jpg" alt="Automação Predial" data-titulo="Visita Técnica para Avaliação de Sistemas"
+                data-desc="Visita técnica especializada para análise, diagnóstico e orientação técnica de sistemas elétricos, automação e aquecimento.">
+              <div class="card-overlay">Ver Detalhes</div>
+            </div>
+
+          </div>
+
+          <button class="carousel-btn next-btn" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="projectModal" class="modal-overlay">
+      <div class="modal-box">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+
+        <button class="modal-nav-btn modal-prev" onclick="changeModalImage(-1)">&#10094;</button>
+
+        <div class="modal-body">
+          <div class="modal-left">
+            <img id="modalImg" src="" alt="Imagem do Projeto">
+          </div>
+          <div class="modal-right">
+            <h3 id="modalTitle">Título do Serviço</h3>
+            <div class="modal-divider"></div>
+            <p id="modalDesc">Descrição detalhada...</p>
+
+            <button class="btn-primary modal-cta"
+              onclick="closeModal(); document.querySelector('#contato').scrollIntoView()">
+              Quero um orçamento deste serviço
+            </button>
+          </div>
+        </div>
+
+        <button class="modal-nav-btn modal-next" onclick="changeModalImage(1)">&#10095;</button>
+      </div>
+
+
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+
+    </div>
+
+    <section class="form-section" id="contato">
+      <div class="container">
+        <div class="form-wrapper">
+          <div class="form-left">
+            <img src="./assets experience/b0060629-0e72-4d26-b0ad-fd838952333e.jfif" alt="Eletricista Trabalhando"
+              class="form-image">
+          </div>
+
+          <div class="form-right">
+            <h2 class="form-title">Faça seu orçamento via WhatsApp</h2>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Serviço Desejado</label>
+                <select id="service" name="service" required>
+                  <option value="">Selecione o Serviço</option>
+                  <option value="Instalações elétricas">Instalações Elétricas</option>
+                  <option value="Automação">Automação</option>
+                  <option value="Aquecimento solar">Aquecimento Solar</option>
+                  <option value="Manutenção e emergências">Manutenção e Emergências</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-submit">Enviar e Salvar</button>
+            </form>
+
+            <div class="contact-info">
+         
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+
+          <div class="footer-section about">
+            <img src="./logo/ChatGPT Image 26 de set. de 2025, 08_17_15.png" alt="Logo Rodapé" class="footer-logo">
+            <p>
+              Especialistas em instalações elétricas, automação residencial e energia solar.
+              Segurança e tecnologia para o seu imóvel.
+            </p>
+          </div>
+
+          <div class="footer-section links">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#clientes">Clientes</a></li>
+              <li><a href="#contato">Solicitar Orçamento</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section contact">
+            <h3>Fale Conosco</h3>
+            <p>📍 Atendemos em toda região</p>
+            <p>📞 +55 (15) 99621-0888</a></p>
+            <p>✉️rafael.eletrica240@gmail.com</p>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Soluções em Elétrica, Automação e Energia Solar. Todos os direitos reservados.</p>
+          <p>Desenvolvido com tecnologia de ponta.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+
+</html>
